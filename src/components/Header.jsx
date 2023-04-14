@@ -9,7 +9,7 @@ export const Header = () => {
 
         <ul className="navbar-nav ">
           <li className="nav-item me-auto">
-            <Link to="/home" className="nav-link active" aria-current="page" >Home</Link>
+            <Link to="/" className="nav-link active" aria-current="page" >Home</Link>
           </li>
 
           <li className="nav-item">
