@@ -4,8 +4,9 @@ export const Usuario = ({ nome, cargo, redes }) => {
       <h2 className="display-1">{nome}</h2>
       <div className="d-flex">
         <span className="lead flex-grow-1">{cargo}</span>
-        {redes.map((rede) => (
+        {redes.map((rede, index) => (
           <a
+            key={index}
             className="lead mx-1"
             role="button"
             href={rede.link}

@@ -10,16 +10,18 @@
 
 import { createBrowserRouter } from "react-router-dom";
 import { App } from "./App";
-import { QuemSou } from "./pages/QuemSou";
-import { Home } from "./pages/Home";
+import { QuemSou } from "./pages/QuemSou.jsx";
+import { Home } from "./pages/Home.jsx";
+import { Error } from "./components/Error";
 
 export const appRouter = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     children: [
-      { path: "./pages/Home.jsx", element: <Home /> },
-      { path: "./pages/QuemSou.jsx", element: <QuemSou /> }
+      { path: "/home", element: <Home /> },
+      { path: "/quem-sou", element: <QuemSou /> },
+      { path: "*", element: <Error /> }
     ],
   },
 ]);

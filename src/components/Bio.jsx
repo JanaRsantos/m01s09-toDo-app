@@ -1,16 +1,12 @@
 import React from "react";
 
-export class Bio extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
+export const Bio = ({ children }) => {
+  
     return (
       <div>
         <h3>Bio</h3>
-        {this.props.children}
+        {children}
       </div>
     );
-  }
+  
 }

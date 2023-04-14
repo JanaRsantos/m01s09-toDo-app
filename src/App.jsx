@@ -1,13 +1,14 @@
 import { Header } from "./components/Header";
 import { Outlet } from "react-router-dom";
+import { ToDoProvider } from "./contexts/ToDoProvider";
 
 export const App = () => {
   return (
-    <div>
+    <ToDoProvider>
       <Header />
       <main className="container mt-4">
-        {/* algo precisa ser modificado aqui... */}
+        <Outlet />
       </main>
-    </div>
+    </ToDoProvider>
   );
 };
